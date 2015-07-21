@@ -408,7 +408,8 @@ define([
 			}
 
 			var rows = (options && options.rows) || this._rows;
-			if (rows) {
+			var index = rowElement.rowIndex;
+			if (rows && rows[index] && rows[index].id == rowElement.id) {
 				delete rows[rowElement.rowIndex];
 			}
 
