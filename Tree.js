@@ -276,6 +276,7 @@ define([
 			}
 			this._treeColumnListeners = [];
 			this._treeColumn = null;
+			this.inherited(arguments);
 		},
 
 		_calcRowHeight: function (rowElement) {
