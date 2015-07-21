@@ -408,8 +408,9 @@ define([
 			}
 
 			var rows = (options && options.rows) || this._rows;
-			if (rows) {
-				delete rows[rowElement.rowIndex];
+			var index = rowElement.rowIndex;
+			if (rows && rows[index] && rows[index].id == rowElement.id) {
+				delete rows[index];
 			}
 
 			return this.inherited(arguments);
